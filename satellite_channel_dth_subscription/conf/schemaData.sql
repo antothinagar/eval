@@ -1,0 +1,60 @@
+INSERT INTO `channels`(`id`, `name`, `cost`, `language`)
+VALUES (1, 'DD_national', 0, 'Hindi'),
+       (2, 'DD_national', 0, 'English'),
+       (3, 'DD_national', 0, 'Marathi'),
+       (4, 'DD_national', 0, 'Telugu'),
+       (5, 'Zee_news', 10, 'Hindi'),
+       (6, 'Zee_telugu', 10, 'telugu'),
+       (7, 'Zee_cinema', 10, 'Hindi'),
+       (8, 'Zee_marathi', 10, 'Marathi'),
+       (9, 'Zee_sports', 10, 'English'),
+       (10, 'Zee_tv', 10, 'English');
+
+INSERT INTO `packages`(`id`, `name`)
+VALUES (1, 'basic'),
+       (2, 'monthly'),
+       (3, 'half yearly'),
+       (4, 'quarterly'),
+       (5, 'yearly');
+
+INSERT INTO `package_channel`(`package_id`, `channel_id`)
+VALUES (1, 1),
+       (1, 2),
+       (1, 3),
+       (1, 4),
+       (2, 1),
+       (2, 2),
+       (2, 3),
+       (2, 4),
+       (2, 5),
+       (3, 1),
+       (3, 2),
+       (3, 3),
+       (3, 4),
+       (3, 5),
+       (3, 6),
+       (4, 1),
+       (4, 2),
+       (4, 3),
+       (4, 4),
+       (4, 5),
+       (4, 6),
+       (4, 7),
+       (4, 8),
+       (5, 1),
+       (5, 2),
+       (5, 3),
+       (5, 4),
+       (5, 5),
+       (5, 6),
+       (5, 7),
+       (5, 8),
+       (5, 9),
+       (5, 10);
+
+INSERT INTO `plan` (`id`, `price`, `package_id`, `duration`)
+VALUES (1, 0, 1, 'All'),
+       (2, 100, 2, '30 days'),
+       (3, 250, 3, '90 days'),
+       (4, 390, 4, '180 days'),
+       (5, 500, 5, '365 days');
